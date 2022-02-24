@@ -3,4 +3,14 @@
     background: url(../images/bg-mobile-dark.jpg) no-repeat hsl(235, 24%, 19%);
     background-color: #fff;
   }
+  .container {
+    margin-top: 12rem;
+    /* margin: 0 1.2rem; */
+  }
+}
+
+@media (max-width: 25em) {
+  .todo-action {
+    gap: 1.2rem;
+  }
 }
