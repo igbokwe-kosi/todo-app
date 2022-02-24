@@ -137,12 +137,14 @@ todoContainer.addEventListener('click', function (e) {
     // e.target.closest('li')
     // checkbox.checked = !checkbox.check;
     checkbox.nextElementSibling.classList.toggle('line-through');
+
     // console.log(e.target.closest('li'));
     const index = +e.target.closest('li').dataset.index;
     console.log(index);
 
     todo[index].done = !todo[index].done;
-    console.log(todo[index].done);
+    todoItemsLeft.textContent = `${itemsLeft()} items left`;
+    // console.log(todo[index].done);
   }
 
   const btnDelete = e.target.closest('.btn--delete');
