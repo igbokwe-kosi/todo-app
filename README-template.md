@@ -61,6 +61,7 @@ let themeMode = `${
 ### Continued development
 
 I plan on adding the way to reorder the task in the todo list later on.
+Also plan on using localStorage to save the todo items
 
 ### Useful resources
 

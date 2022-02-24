@@ -16,6 +16,7 @@ body {
   font-size: 1.8rem;
   transition: all 0.5s;
   max-width: 90em;
+  background-size: contain;
   min-height: 100vh;
   display: grid;
   justify-items: center;
@@ -49,7 +50,7 @@ body {
 }
 
 .btn--toggle::before {
-  transform: translate(-100%, 0%);
+  transform: translate(-100%, -50%);
 }
 
 .form,
