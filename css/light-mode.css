@@ -1,0 +1,26 @@
+body {
+  background: url(../images/bg-desktop-light.jpg) no-repeat hsl(236, 33%, 92%);
+  color: hsl(236, 9%, 61%);
+}
+@media (max-width: 23.4375em) {
+  body {
+    background: url(../images/bg-mobile-light.jpg) no-repeat hsl(236, 33%, 92%);
+  }
+}
+
+.btn--toggle::before {
+  position: absolute;
+  content: url(../images/icon-sun.svg);
+}
+.heading-primary {
+  color: hsl(0, 0%, 98%);
+}
+.form,
+.todo-list {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.todo-sort > *:hover,
+.todo-clear:hover {
+  color: hsl(235, 24%, 19%);
+}

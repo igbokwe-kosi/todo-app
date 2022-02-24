@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 1.8rem;
+  transition: all 0.5s;
+  max-width: 90em;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+}
+.container {
+  margin-top: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40rem;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.section-header {
+  justify-content: space-between;
+  display: flex;
+
+  width: 100%;
+  align-items: center;
+  /* justify-content: center; */
+}
+.heading-primary {
+  letter-spacing: 0.5rem;
+}
+.btn--toggle {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s;
+}
+
+.btn--toggle::before {
+  transform: translate(-100%, -50%);
+}
+
+.form,
+.todo-list {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 100%;
+  background-color: hsl(235, 19%, 35%);
+}
+.form {
+  padding: 1.2rem;
+  gap: 1.2rem;
+  align-items: center;
+}
+.todo-list {
+  padding: 0 1.2rem 1px;
+  list-style: none;
+  flex-direction: column;
+}
+
+.todo-items {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  /* border-bottom: 1px solid hsl(236, 9%, 61%); */
+}
+
+.form__text-box {
+  /* width: 6.4rem; */
+  flex: 1;
+  /* border: 1px solid hsl(236, 9%, 61%); */
+  /* border-radius: 0.8rem; */
+  border: none;
+  background-color: transparent;
+  padding: 0.8rem;
+  font-size: 2rem;
+  color: hsl(236, 9%, 61%);
+}
+.form__text-box:placeholder-shown {
+  font-size: 2.4rem;
+  font-family: inherit;
+  color: hsl(236, 9%, 61%);
+}
+.form__text-box:focus {
+  outline: none;
+}
+.form__check-box {
+  position: relative;
+  /* display: none; */
+  /* visibility: hidden; */
+  width: 2.4rem;
+  height: 2.4rem;
+  appearance: none;
+  transition: all 0.3s;
+}
+.form__check-box::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: transparent;
+  border: 1px solid hsl(236, 9%, 61%);
+  border-radius: 50%;
+}
+
+.form__check-box:checked::before {
+  content: url(../images/icon-check.svg);
+  display: flex;
+  /* border: 2px solid transparent; */
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.line-through {
+  transition: all 0.3s;
+  text-decoration: line-through;
+  color: hsl(234, 39%, 85%);
+}
+
+.btn--delete {
+  transition: all 0.5s;
+  /* transition: opacity 0.3s 0.4s; */
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(5rem);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.todo-items:hover .btn--delete {
+  transform: translateX(0);
+  opacity: 100;
+  visibility: visible;
+  pointer-events: visible;
+}
+
+.todo-action {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0;
+}
+
+.todo-items-left {
+  font-size: 1.6rem;
+  color: hsl(236, 9%, 61%);
+}
+
+.btn--sort,
+.todo-clear {
+  border: none;
+  color: hsl(236, 9%, 61%);
+  background-color: transparent;
+  transition: all.3s;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.btn--sort:active,
+.todo-clear:active,
+.active {
+  color: hsl(220, 98%, 61%);
+}

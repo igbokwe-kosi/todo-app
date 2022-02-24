@@ -1,0 +1,6 @@
+@media (max-width: 23.4375em) {
+  body {
+    background: url(../images/bg-mobile-dark.jpg) no-repeat hsl(235, 24%, 19%);
+    background-color: #fff;
+  }
+}
